@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Animation</title>
+    <style>
+        #wrapper {
+            width: 500px;
+            height: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            border: 8px solid #23585c;
+            border-radius: 50%;
+        }
+
+        #content {
+            width: 60px;
+            height: 60px;
+            background-color: crimson;
+            border-radius: 50%;
+            position: relative;
+            top: 50px;
+            left: 30px;
+            animation: animation_rotate 2s linear infinite;
+        }
+
+        @keyframes animation_rotate {
+            0% {
+                left: 0px;
+                top:450px;
+            }
+
+            25% {
+                top:350px;
+                left: 100px;
+            }
+            50% {
+                top:450px;
+                left: 200px;
+            }
+            75% {
+                top: 350px;
+                left:300px;
+            }
+            
+            100% {
+                top:450px;
+                left: 450px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="content"></div>
+    </div>
+</body>
+</html>

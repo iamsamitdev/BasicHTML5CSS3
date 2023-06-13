@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3 Selector</title>
+    <style>
+        /*** ขึ้นต้นด้วยคำว่า nav ***/
+        div[id^="nav"] {
+            background-color: #ff0000;
+        }
+
+         /*** ลงท้ายด้วยคำว่า primary ***/
+        div[id$="primary"] {
+            background-color: #ff0;
+        }
+
+        /***  ค้นหาคำว่า content ในประโยค ***/
+        div[id*="content"] {
+            background-color: #0f0;
+        }
+
+        /* Target content-primary */
+        div#content-primary:target {
+            border: 2px dotted #000;
+        }
+
+        div#content-secondary:target {
+            border: 2px dotted #000;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="#content-primary">Link 1</a> 
+    <a href="#content-secondary">Link 2</a>    
+    <div id="nav-primary">D1</div>
+    <div id="content-primary">D2</div>
+    <div id="content-secondary">D3</div>
+    <div id="tertiary-content">D4</div>
+    <div id="nav-secondary">D5</div>
+</body>
+</html>
